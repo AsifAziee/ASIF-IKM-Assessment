@@ -47,5 +47,5 @@ VALUES (1, 'Product A', 10.00),
        (3, 'Product C', 30.00);
 
 
-Run the following in CMD
- pip install requirements.txt
+Run the following in CMD  
+ **_pip install requirements.txt_**
