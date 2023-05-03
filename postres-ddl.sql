@@ -1,0 +1,20 @@
+CREATE TABLE customers (
+  id INTEGER NOT NULL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  phone VARCHAR(20) DEFAULT 'N/A'
+);
+
+CREATE TABLE orders (
+  id INTEGER NOT NULL PRIMARY KEY,
+  customer_id INTEGER NOT NULL,
+  total_price NUMERIC(10, 2) NOT NULL,
+  created_at TIMESTAMP NOT NULL,
+  CONSTRAINT fk_orders_customers FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
+
+CREATE TABLE products (
+  id INTEGER NOT NULL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  price NUMERIC(10, 2) NOT NULL
+);
